@@ -874,13 +874,7 @@ const Navbar = () => {
       anchor="top"
       open={offcanvastate.top}
       onClose={toggleDrawer("top", false)}
-      sx={{
-        '& .MuiDrawer-paper': {
-          borderBottomLeftRadius: '30px', // Adjust the radius as needed
-          borderBottomRightRadius: '30px', // Adjust the radius as needed
-
-        }
-      }}
+  
     >
       {list("top")}
     </Drawer>

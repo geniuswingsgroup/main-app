@@ -84,6 +84,11 @@ const Footer = () => {
                     {t("Our_Projects")}
                   </Link>
                 </li>
+                <li className="mb-6">
+                  <Link to={"/Our-features"} className="text-sub_text hover:text-primary">
+                    {t("Our_Features")}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="lg:mx-auto text-center sm:text-left">
