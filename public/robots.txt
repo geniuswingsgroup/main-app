@@ -1,0 +1,13 @@
+
+User-agent: *
+# Block unnecessary or sensitive areas
+Disallow: /api/
+Disallow: /login/
+Disallow: /register/
+
+
+# Allow search engines to crawl the main website
+Allow: /
+
+# Specify the location of the sitemap
+Sitemap: https://genius-wings.com/sitemap.xml
