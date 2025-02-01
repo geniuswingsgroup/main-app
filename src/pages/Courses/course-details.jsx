@@ -212,9 +212,9 @@ const CourseDetails = () => {
               </h2>
               <div className="mb-4">
                   <div className="flex gap-4 items-center">
-                    {/* <span className="text-primary font-bold">
+                    <span className="text-primary font-bold">
                       {courseDetails ? courseDetails.price : ""}
-                    </span> */}
+                    </span>
                     <div style={{
       
       fontFamily: i18n.language === 'ar' ? 'Cairo, sans-serif' : '', // Default font when language is not Arabic

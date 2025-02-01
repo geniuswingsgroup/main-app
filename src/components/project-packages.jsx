@@ -45,6 +45,8 @@ const Project_package = () => {
               <span className="text-4xl font-bold tracking-tight text-white">
                 $450
               </span>
+              <span className="text-white"> Ab</span>
+
             </p>
             <Link
               to="/Contact-us"
@@ -87,6 +89,8 @@ const Project_package = () => {
               <span className="text-4xl font-bold tracking-tight text-white">
                 $1600
               </span>
+              <span className="text-white"> Ab</span>
+
             </p>
             <Link
                     to="/Contact-us"
@@ -123,8 +127,9 @@ const Project_package = () => {
             {/* <p className="mt-4 text-sm leading-6 text-gray-300">Product details for Product Type 1</p> */}
             <p className="mt-6 flex items-baseline gap-x-1">
               <span className="text-4xl font-bold tracking-tight text-white">
-                $450
+              $2000 
               </span>
+              <span className="text-white"> Ab</span>
             </p>
             <Link
                     to="/Contact-us"
