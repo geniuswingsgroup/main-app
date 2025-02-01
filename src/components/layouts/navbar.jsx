@@ -812,7 +812,7 @@ const Navbar = () => {
         className={`md:text-sm ${
           isScrolled
             ? "z-20 top-0  mt-[6px] inset-x-0 md:relative bg-blur bg-opacity-80 backdrop-blur-lg"
-            : "md:bg-transparent"
+            : "md:bg-transparent mt-[6px]"
         }`}
       >
         
