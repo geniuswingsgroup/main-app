@@ -145,7 +145,7 @@ const AllCourses = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen bg-background_color md:pt-3.5    flex flex-col justify-between">
+        <div className="min-h-screen bg-background_color md:pt-5  pt-1   flex flex-col justify-between">
           <div className="pt-[70px] mx-auto w-full main-freeLancer-container">
             <div className="w-full md:h-[250px] flex  flex-col justify-center details-cover h-[180px] ">
               <div className="flex justify-center w-full  items-center">
