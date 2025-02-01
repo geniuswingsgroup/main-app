@@ -64,9 +64,9 @@ const AllCourses = () => {
   };
 
   const filterSubmit = async () => {
-    setLoading(true);
+    setSearchLoading(true);
     await dispatch(course_filter(searchKeyword,gteFilter, lteFilter));
-    setLoading(false);
+    setSearchLoading(false);
     dispatch(gte_value(gteFilter));
     dispatch(lte_value(lteFilter));
 
@@ -145,7 +145,7 @@ const AllCourses = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen bg-background_color md:pt-5  pt-1  flex flex-col justify-between">
+        <div className="min-h-screen bg-background_color md:pt-3.5    flex flex-col justify-between">
           <div className="pt-[70px] mx-auto w-full main-freeLancer-container">
             <div className="w-full md:h-[250px] flex  flex-col justify-center details-cover h-[180px] ">
               <div className="flex justify-center w-full  items-center">
@@ -209,53 +209,60 @@ const AllCourses = () => {
               </div>
             </div>
 
-            <div
-  dir={i18n.language === "ar" ? "rtl" : "ltr"}
-  style={{
-    fontFamily: i18n.language === 'ar' ? 'Cairo, sans-serif' : '', // Default font when language is not Arabic
-  }}
-  className="flex w-full md:absolute justify-center z-10"
->
-  {isDropdownOpen && (
-    <div className="freelance-filter mx-[16px] border border-[#2c2c2c] bg-[#242424] w-full sm:w-[90%] max-w-[600px] max-h-[160px] overflow-hidden md:mt-[-50px] mt-[14px] rounded-xl">
-      <div className="flex text-text_color flex-end">
-        <div className="flex w-full flex-col mx-[20px]">
-          <div className="flex min-w-full my-[20px] max-h-[100px]  justify-center gap-[30px]">
-            <div className="grid w-full gap-6 mb-6 sm:grid-cols-1">
-              <div>
-                <p className="text-xs sm:text-sm">{t("price")}</p>
-                <hr className="mb-[20px] w-[95%] mt-1" />
-                <form
-                  onSubmit={filterSubmit}
-                  className="mt-6 flex  items-center text-xs sm:text-sm   gap-3 max-w-[90%] mx-4"
-                >
-                  {t("from")}
-                  <input
-                    value={gteFilter}
-                    className="block min-w-[30px] h-[30px] p-1 w-full text-xs sm:text-sm focus:border-[#494949] focus:ring-0 text-text_color border border-[#494949] rounded-lg bg-[#333333] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    onChange={(e) => setGteFilter(e.target.value)}
-                    type="number"
-                  />
-                  {t("to")}
-                  <input
-                    value={lteFilter}
-                    className="block min-w-[30px] h-[30px] p-1 w-full text-xs sm:text-sm focus:border-[#494949] focus:ring-0 text-text_color border border-[#494949] rounded-lg bg-[#333333] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                    onChange={(e) => setLteFilter(e.target.value)}
-                    type="number"
-                  />
-                  <button className="bg-primary hover:bg-hover active:bg-active text-white px-3 py-1 ml-2 rounded-md h-[30px] text-xs sm:text-sm">
-                    {t("filter")}
-                  </button>
-                </form>
-              </div>
+            <div      dir={i18n.language === "ar" ? "rtl" : "ltr"} 
+            style={{
+      
+      fontFamily: i18n.language === 'ar' ? 'Cairo, sans-serif' : '', // Default font when language is not Arabic
+    }} className="flex w-full md:absolute justify-center z-10   w-ful ">
+              {isDropdownOpen && (
+                <div className=" freelance-filter mx-[16px]   border border-[#2c2c2c]    bg-[#242424] w-[600px]  max-h-[160px] overflow-hidden  md:mt-[-50px] mt-[14px]   rounded-xl ">
+                  <div className=" flex text-text_color  flex-end">
+                    <div className="flex w-full flex-col  mx-[20px]">
+                      {" "}
+                      <div className="flex min-w-full my-[20px]    max-h-[100px] overflow-auto justify-center  gap-[20px]">
+                        <div className="grid  w-full gap-6 mb-6 md:grid-cols-1">
+                          <div>
+                            <p className="">{t("price")}
+                            </p>
+                            <hr className="mb-[20px]  mt-1" />
+                            <form
+                              onSubmit={filterSubmit}
+                              className="mt-6 flex sm:text:sm  text-[13px]  items-center gap-3  "
+                            >
+                               {t("from")}
+                              <input
+                                value={gteFilter}
+                                className="block  h-[40px] w-full text-sm  focus:border-[#494949] focus:ring-0 text-text_color border border-[#494949] rounded-lg  bg-[#333333] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                onChange={(e) => {
+                                  setGteFilter(e.target.value);
+                                }}
+                                type="number"
+                                name=""
+                                id=""
+                              />
+                               {t("to")}
+                              <input
+                                value={lteFilter}
+                                className="block sm:text:sm   sm:p-4 p-2  text-[12px]  h-[40px] w-full  focus:border-[#494949] focus:ring-0 text-text_color border border-[#494949] rounded-lg  bg-[#333333] dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                onChange={(e) => {
+                                  setLteFilter(e.target.value);
+                                }}
+                                type="number"
+                                name=""
+                                id=""
+                              />
+                              <button className="bg-primary sm:text:sm  text-[13px] hover:bg-hover active:bg-active text-white px-3 py-2 ml-2 rounded-md">
+                              {t("filter")}
+                              </button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )}
-</div>
-
 
             <div
               onClick={() => {
@@ -281,7 +288,7 @@ const AllCourses = () => {
                         {data.name}
                       </span>
                       <span className="text-primary whitespace-nowrap font-semibold">
-                        {data.price} IDQ
+                        {data.price} IQD
                       </span>
                     </div>
                     <p className="text-[13px] overflow-hidden sm:min-h-[70px] min-h-[60px] sm:text-[15px] text-sub_text line-clamp-3 break-words duration-500 mb-4">

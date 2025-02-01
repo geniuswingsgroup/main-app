@@ -804,14 +804,14 @@ const Navbar = () => {
     }}
       className={
         isScrolled
-          ? "fixed w-full z-50 shadow- backdrop-blur-lg md:py-[8px] pt-[8px]"
-          : "fixed w-full z-50 shadow-sm md:py-[8px] pt-[8px]"
+          ? "fixed w-full z-50 shadow- backdrop-blur-lg md:py-[8px]"
+          : "fixed w-full z-50 shadow-sm md:py-[8px] "
       }
     >
       <nav
-        className={`md:text-sm transition-all duration-300 ease-in-out ${
+        className={`md:text-sm ${
           isScrolled
-            ? "z-20 top-0 inset-x-0 md:relative bg-blur bg-opacity-80 backdrop-blur-lg"
+            ? "z-20 top-0  mt-[6px] inset-x-0 md:relative bg-blur bg-opacity-80 backdrop-blur-lg"
             : "md:bg-transparent"
         }`}
       >

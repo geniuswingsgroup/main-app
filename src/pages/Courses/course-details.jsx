@@ -213,7 +213,7 @@ const CourseDetails = () => {
               <div className="mb-4">
                   <div className="flex gap-4 items-center">
                     <span className="text-primary font-bold">
-                      {courseDetails ? courseDetails.price : ""}
+                      {courseDetails ? courseDetails.price : ""} IQD
                     </span>
                     <div style={{
       
